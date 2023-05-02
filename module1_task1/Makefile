@@ -1,7 +1,7 @@
 .PHONY: build clean post
 
 build:
-		hugo
+		hugo -d dist/
 
 clean:
 		rm -rf dist/*
