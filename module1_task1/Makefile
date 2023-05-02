@@ -1,5 +1,3 @@
-.PHONY: build clean post
-
 build:
 		hugo
 
