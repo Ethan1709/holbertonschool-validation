@@ -1,30 +1,16 @@
-Testing in the Software Development Methodology
+## Testing in the Software Development Methodology
 
-Learning Objectives
+### Prerequisites
+* Golang in v1.15.*
+* NPM v7+ with NodeJS v14.* (stable)
+* Python 3 with pip module
+* golangci-lint
 
-This project aims at practicing with automated tests. The goal is to understand the pros and cons of different testing methods to be able to understand the value of doing, or not doing, a kind of test.
-
-After this project, you should be able to:
-
-    Understand what linting is the extent of its usages (which kind of file can be linted, and the impact of running it often)
-    Understand the difference between unit tests and integration tests
-    Use code coverage as a helper to write tests
-    Understand that not only “classical” code is to be tested, but also a lot of the artifacts we can generate
-    Understand how “component”-based testing for acceptance and end to end validation is to be used
-
-Concepts
-
-You should have a basic knowledge on the following concepts:
-
-    What a compiled language is (C/C#/Golang/Rust/etc.)
-        Generation process from source to executable binary
-        Basic types: string, integer, boolean, maps, arrays
-        Basic algorithmic: loops, conditional, functions
-
-    Installing command line tools with NPM (in addition to package managers)
-
-    Understand the basics of the HTTP protocol (client/server, verbs, headers)
-
-Prerequisites
-
-The following elements are required In addition to the previous module (“Module 1: Introduction to DevOps: Automate Everything to Focus on What Really Matters”) prerequisites.
+### Lifecycle
+* "build": compile the source code of the application to a binary
+* "run": Run the application in background by executing the binary
+* "stop": Stop the application with the command kill XXXXX where XXXX\
+X is the Process ID of the application
+* "clean": Stop the application
+* "test": You want to test it to ensure that it behaves as expected
+* "help": Print a list of all the goals with a sentence

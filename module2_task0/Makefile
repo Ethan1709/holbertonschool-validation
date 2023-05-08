@@ -1,11 +1,11 @@
-build:
+build: ##compile the source code of the application to a binary name
 	go build
-run:
+run: ##Run the application in background by executing the binary awesome-api
 	./awesome-api >./awesome-api.log 2>&1 &
-stop:
+stop: ##Stop the application with the command kill XXXXX where XXXXX is the Process ID of the application
 	kill "$(pgrep awesome-api)"
-clean:
+clean: ##Stop the application. Delete the binary awesome-api and the log file awesome-api.log
 	kill "$(pgrep awesome-api)"
 	rm awesome-api awesome-api.log
-test:
+test: ##You want to test it to ensure that it behaves as expected
 	curl http://localhost:9999
