@@ -15,3 +15,4 @@ X is the Process ID of the application
 * "test": You want to test it to ensure that it behaves as expected
 * "help": Print a list of all the goals with a sentence
 * "lint": Fail when the linter catches and error
+* "unit-tests": should execute (successfully) the Golang unit tests
