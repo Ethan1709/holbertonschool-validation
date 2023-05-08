@@ -9,6 +9,7 @@ clean: ##Stop the application. Delete the binary awesome-api and the log file aw
 	rm awesome-api awesome-api.log
 test: ##You want to test it to ensure that it behaves as expected
 	curl http://localhost:9999
+	curl http://localhost:9999/health
 help: ##help for user
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\
 \\$$//' | sed -e 's/##//'
