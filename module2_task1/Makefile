@@ -11,6 +11,8 @@ clean: ##Stop the application. Delete the binary awesome-api and the log file aw
 test: ##You want to test it to ensure that it behaves as expected
 	curl http://localhost:9999
 	curl http://localhost:9999/health
+lint: ##Fail when the linter catches and error
+	golingci-lint run
 help: ##help for user
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\
 \\$$//' | sed -e 's/##//'
