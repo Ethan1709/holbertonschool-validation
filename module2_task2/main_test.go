@@ -47,7 +47,7 @@ func Test_HelloHandler(t *testing.T) {
       name:           "Elle est ou Jeanne",
       queryString:    "name=Dav&name=Greg",
       responseCode:   200,
-      body:           "Hello there!",
+      body:           "Hello Dav!",
     },
   }
   for _, tt := range tests {
