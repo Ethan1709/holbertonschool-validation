@@ -17,4 +17,5 @@ X is the Process ID of the application
 * "lint": Fail when the linter catches and error
 * "test": should execute all the tests
 * "post": add a new post
-* "check": check for something
+* "check": Succeed by default, and fail when presented with a dead link or a badly written Markdown file
+* "validate": Always succeed by default and should print the result on the stdout
