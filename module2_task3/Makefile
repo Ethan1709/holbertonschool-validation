@@ -7,12 +7,10 @@ stop: ##Stop the application with the command kill XXXXX where XXXXX is the Proc
 	pkill awesome-api || true
 clean: ##Stop the application. Delete the binary awesome-api and the log file awesome-api.log
 	pkill awesome-api || true
-	rm awesome-api awesome-api.log
-	pkill coverage-integrations.out || true
-	pkill coverage-units.out || true
+	rm -f awesome-api awesome-api.log coverage-*
 test: ##You want to test it to ensure that it behaves as expected
-	curl http://localhost:9999
-	curl http://localhost:9999/health
+	go test -v -short -coverprofile=coverage-units.out
+	go test -v -coverprofile=coverage-integrations.out
 lint: ##Fail when the linter catches and error
 	golingci-lint run
 unit-tests: ##should execute (successfully) the Golang unit tests
