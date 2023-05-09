@@ -21,6 +21,10 @@ check:	## Succeed by default, and fail when presented with a dead link or a badl
 	markdown-link-check README.md content/posts/*
 validate:	## Always succeed by default and should print the result on the stdout 
 	python3 /opt/W3C-Validator/w3c_validator.py ./dist/index.html || true
+unit-tests: ##should execute (successfully) the Golang unit tests
+	go test -v -short -coverprofile=coverage-units.out
+integration-tests: ##command to make the integration tests
+	go test -v -coverprofile=coverage-integrations.out
 help: ##help for user
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\
 \\$$//' | sed -e 's/##//'
