@@ -16,4 +16,4 @@ X is the Process ID of the application
 * "help": Print a list of all the goals with a sentence
 * "lint": Fail when the linter catches and error
 * "unit-tests": should execute (successfully) the Golang unit tests
-* "integration-test": making integration tests
+* "integration-tests": making integration tests
