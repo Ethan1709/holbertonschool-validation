@@ -15,6 +15,8 @@ lint: ##Fail when the linter catches and error
 	golingci-lint run
 unit-tests: ##should execute (successfully) the Golang unit tests
 	go test -v -short -coverprofile=coverage-units.out
+intgration-tests: ##integration test
+	go test coverage-integrations.out
 help: ##help for user
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\
 \\$$//' | sed -e 's/##//'
