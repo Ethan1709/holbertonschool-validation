@@ -8,8 +8,8 @@ stop: ##Stop the application with the command kill XXXXX where XXXXX is the Proc
 clean: ##Stop the application. Delete the binary awesome-api and the log file awesome-api.log
 	pkill awesome-api || true
 	rm awesome-api awesome-api.log
-	pkill coverage-integrations.out
-	pkill coverage-units.out
+	rm coverage-integrations.out
+	rm coverage-units.out
 test: ##You want to test it to ensure that it behaves as expected
 	curl http://localhost:9999
 	curl http://localhost:9999/health
