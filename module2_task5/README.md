@@ -17,3 +17,4 @@ X is the Process ID of the application
 * "lint": Fail when the linter catches and error
 * "test": should execute all the tests
 * "post": add a new post
+* "check": check for something

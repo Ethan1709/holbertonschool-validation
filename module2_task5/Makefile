@@ -15,6 +15,8 @@ lint: ##Fail when the linter catches and error
 	golingci-lint run
 post: ##add a new post
 	go test -v -coverprofile=coverage-integrations.out
+check: ##check for something
+	go test
 help: ##help for user
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\
 \\$$//' | sed -e 's/##//'
