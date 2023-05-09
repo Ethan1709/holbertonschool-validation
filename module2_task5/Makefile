@@ -1,8 +1,6 @@
 build: ##compile the source code of the application to a binary name
 	golangci-lint run
 	go build
-	markdownlint README.md content/posts/*
-	markdown-link-check README.md content/posts/*
 	hugo
 run: ##Run the application in background by executing the binary awesome-api
 	./awesome-api >./awesome-api.log 2>&1 &
