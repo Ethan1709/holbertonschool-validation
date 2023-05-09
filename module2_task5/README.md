@@ -19,3 +19,5 @@ X is the Process ID of the application
 * "post": add a new post
 * "check": Succeed by default, and fail when presented with a dead link or a badly written Markdown file
 * "validate": Always succeed by default and should print the result on the stdout
+* "unit-tests": should execute (successfully) the Golang unit tests
+* "integration-tests": making integration tests
