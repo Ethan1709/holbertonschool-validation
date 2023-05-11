@@ -16,6 +16,8 @@ test: ##execute all the tests
 post:	## Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME
 	hugo new posts/$(POST_NAME).md  
 	sed -i 's/title:.*/title:"$(POST_TITLE)"/' content/posts/$(POST_NAME).md
+lint: ##Fail when the linter catches and error
+	golingci-lint run
 check:	## Succeed by default, and fail when presented with a dead link or a badly written Markdown file
 	markdownlint README.md content/posts/*
 	markdown-link-check README.md content/posts/*
