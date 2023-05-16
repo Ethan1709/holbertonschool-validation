@@ -17,7 +17,7 @@ post:	## Create a new blog post whose filename and title come from the environme
 	$(HUGO) new posts/$(POST_NAME).md
 	sed -i '2s/.*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
 
-stop:	## Stops the application.
+stop:	## Stop the application.
 	@pkill $(TARGET)
 
 clean:	## Stop the application. Delete the binary and the log file.
